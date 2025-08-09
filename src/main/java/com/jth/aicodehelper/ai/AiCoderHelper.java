@@ -22,6 +22,12 @@ public class AiCoderHelper {
         AiMessage aiMessage = chatResponse.aiMessage();
         log.info("Chat Message:{}",aiMessage.toString());
         return aiMessage.text();
-        
+    }
+
+    public String chatWithMessage(UserMessage userMessage){
+        ChatResponse chatResponse = qwenChatModel.chat(userMessage);
+        AiMessage aiMessage = chatResponse.aiMessage();
+        log.info("Chat Message:{}",aiMessage.toString());
+        return aiMessage.text();
     }
 }
