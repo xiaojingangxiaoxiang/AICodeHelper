@@ -32,4 +32,10 @@ class AiCodeHelperServiceTest {
         AiCodeHelperService.Report report = aiCodeHelperService.chatForReport(userMessage);
         System.out.println(report);
     }
+
+    @Test
+    void chatWithRag() {
+        String result = aiCodeHelperService.chat("怎么学习Java，有哪些面试题");
+        System.out.println(result);
+    }
 }
